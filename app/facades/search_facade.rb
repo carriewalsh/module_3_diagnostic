@@ -9,7 +9,7 @@ class SearchFacade
   end
 
   def results
-    conn = Faraday.new("https://developer.nrel.gov/api/alt-fuel-stations/v1.json?") do |f|
+    conn = Faraday.new("https://developer.nrel.gov//api/alt-fuel-stations/v1/nearest.json") do |f|
       f.params["api_key"] = ENV["DEV_API_KEY"]
       f.params["access"] = "public"
       f.params["fuel_type"] = "ELEC,LPG"
