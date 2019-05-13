@@ -4,11 +4,11 @@
 <ul>
   <% facade.results.each do |result| %>
   <li>
-    Name: <%= facade.name %>
-    Address: <%= facade.street_address, facade.city, facade.state, facade.zip %>
-    Fuel Types: <%= facade.fuels %>
-    Distance: <%= facade.distance %> miles
-    Access Times: <%= facade.access_days_time %>
+    Name: <%= result.name %>
+    Address: <%= result.address %>
+    Fuel Types: <%= result.fuels %>
+    Distance: <%= result.distance %> miles
+    Access Times: <%= result.access_days_time %>
   </li>
   <% end %>
 </ul>

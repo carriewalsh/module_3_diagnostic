@@ -4,6 +4,10 @@ class SearchFacade
     @zip = zip
   end
 
+  def total_count
+    results.total_count
+  end
+
   def results
     conn = Faraday.new("https://developer.nrel.gov/api/alt-fuel-stations/v1.json?") do |f|
       f.params["api_key"] = ENV["DEV_API_KEY"]
