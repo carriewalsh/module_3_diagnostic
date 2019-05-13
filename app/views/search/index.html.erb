@@ -1,14 +1,19 @@
+<h2>For location: <%= facade.results.first.zip %></h2>
 <h2>Total Results: <%= facade.total_count %></h2>
 
 <h3>Nearest 15</h3>
 <ul>
   <% facade.nearest_fifteen.each do |result| %>
   <li class="station">
-    Name: <%= result.name %>
-    Address: <%= result.address %>
-    Fuel Types: <%= result.fuel_type %>
-    Distance: <%= result.distance.round(2) %> miles
-    Access Times: <%= result.hours %>
+    <ul>
+      <li>Name: <%= result.name %></li>
+      <li>Address: <%= result.address %></li>
+      <li>Fuel Types: <%= result.fuel_type %></li>
+      <li>Distance: <%= result.distance.round(2) %> miles</li>
+      <li>Access Times: <%= result.hours %></li>
+      <br>
+    </ul>
+
   </li>
   <% end %>
 </ul>

@@ -10,10 +10,7 @@ describe "User can search by zip code" do
 
     expect(page).to have_content("Total Results: 93")
     expect(page).to have_css(".station", count: 15)
-    expect(page).to_not have_content("")
-    expect(page).to_not have_content("private")
-    expect(page).to_not have_content("planned")
-    expect(page).to_not have_content("temporary unavailable")
+
 
     within first ".station" do
       expect(page).to have_content("Name: ")
