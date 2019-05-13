@@ -3,7 +3,7 @@ require "rails_helper"
 describe "User can search by zip code" do
   it "returns a list of stations that match query" do
     visit "/"
-    fill_in "q", with: 80206
+    fill_in "zip", with: 80206
     click_on "Locate"
 
     expect(current_path).to eq('/search')
