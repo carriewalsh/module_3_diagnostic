@@ -6,7 +6,7 @@ describe "User can search by zip code" do
     fill_in "q", with: 80206
     click_on "Locate"
 
-    expect(current_page).to eq('/search')
+    expect(current_path).to eq('/search')
 
     expect(page).to have_content("Total Results: 90")
     expect(page).to have_css(".station", count: 15)
@@ -16,11 +16,11 @@ describe "User can search by zip code" do
     expect(page).to_not have_content("temporary unavailable")
 
     within first ".station" do
-      expect(page).to have_content("Name")
-      expect(page).to have_content("Address")
-      expect(page).to have_content("Fuel Types")
-      expect(page).to have_content("Distance")
-      expect(page).to have_content("Access Times")
+      expect(page).to have_content("Name: ")
+      expect(page).to have_content("Address: ")
+      expect(page).to have_content("Fuel Types: ")
+      expect(page).to have_content("Distance: ")
+      expect(page).to have_content("Access Times: ")
     end
 
 

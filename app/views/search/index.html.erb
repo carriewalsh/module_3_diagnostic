@@ -1,0 +1,14 @@
+<h2>Total Results: <%= facade.total_count %></h2>
+
+<h3>Nearest 15</h3>
+<ul>
+  <% facade.results.each do |result| %>
+  <li>
+    Name: <%= facade.name %>
+    Address: <%= facade.street_address, facade.city, facade.state facade.zip %>
+    Fuel Types: <%= facade.fuels %>
+    Distance: <%= facade.distance %> miles
+    Access Times: <%= facade.access_days_time %>
+  </li>
+  <% end %>
+</ul>
