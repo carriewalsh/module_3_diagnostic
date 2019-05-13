@@ -6,9 +6,9 @@
   <li>
     Name: <%= result.name %>
     Address: <%= result.address %>
-    Fuel Types: <%= result.fuels %>
-    Distance: <%= result.distance %> miles
-    Access Times: <%= result.access_days_time %>
+    Fuel Types: <%= result.fuel_type %>
+    Distance: <%= result.distance.round(2) %> miles
+    Access Times: <%= result.hours %>
   </li>
   <% end %>
 </ul>

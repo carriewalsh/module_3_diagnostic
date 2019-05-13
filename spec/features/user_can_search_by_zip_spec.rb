@@ -8,7 +8,7 @@ describe "User can search by zip code" do
 
     expect(current_path).to eq('/search')
 
-    expect(page).to have_content("Total Results: 90")
+    expect(page).to have_content("Total Results: 93")
     expect(page).to have_css(".station", count: 15)
     expect(page).to_not have_content("")
     expect(page).to_not have_content("private")
