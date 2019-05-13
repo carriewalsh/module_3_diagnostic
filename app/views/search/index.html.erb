@@ -2,8 +2,8 @@
 
 <h3>Nearest 15</h3>
 <ul>
-  <% facade.results.each do |result| %>
-  <li>
+  <% facade.nearest_fifteen.each do |result| %>
+  <li class="station">
     Name: <%= result.name %>
     Address: <%= result.address %>
     Fuel Types: <%= result.fuel_type %>

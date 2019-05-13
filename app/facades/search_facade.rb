@@ -8,6 +8,10 @@ class SearchFacade
     service.total_count
   end
 
+  def nearest_fifteen
+    results[0,15]
+  end
+
 
   def results
     stations_data.map do |data|
